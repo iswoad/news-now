@@ -1,17 +1,14 @@
 import React from 'react';
-import { Card, Button } from 'react-bootstrap';
+import {Card, Button} from 'react-bootstrap';
 
 const News = (props) => {
-    const { title } = props.tiles?.articles;
-   
+    const {title, description} = props.article;
     return (
         <Card>
-            <Card.Header>Featured</Card.Header>
+            <Card.Header as="h5">Featured</Card.Header>
             <Card.Body>
-                <Card.Title> {title} </Card.Title>
-                <Card.Text>
-                    
-                </Card.Text>
+                <Card.Title>{title}</Card.Title>
+                <Card.Text>{description}</Card.Text>
                 <Button variant="primary">Go somewhere</Button>
             </Card.Body>
         </Card>
